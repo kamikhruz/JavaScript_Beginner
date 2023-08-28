@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button
+    onclick="
+        convertTemperature(50,'C');
+    "></button>
+    
+    <script>
+            let temperature;
+        function convertTemperature(degrees, unit){
+            if (unit === 'C'){
+             temperature = (degrees * 9/5) + 32;
+             temperature = temperature + unit;
+            }
+            else if (unit === 'F'){
+             let temperature = (degrees - 32) * 5/9;
+             temperature = temperature + unit;
+            }
+             
+            console.log(`You have converted ${degrees}${unit} to ${temperature}` )
+            
+        }
+    </script>
+</body>
+</html>
