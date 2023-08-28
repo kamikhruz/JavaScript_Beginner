@@ -46,14 +46,29 @@
         scoreBoard.Wins = 0;
         scoreBoard.Loses = 0; 
         scoreBoard.Ties = 0;
+        localStorage.removeItem('score');
+
     "
     >
       Reset Score
     </button>
 
     <script>
-      const scoreBoard = (JSON.parse(localStorage.getItem('score')))
-    
+      const scoreBoard = JSON.parse(localStorage.getItem('score')) ||{ // default operator in use
+          Wins: 0,
+          Loses: 0,
+          Ties: 0
+        };
+
+        /*
+      if (score === null){
+        score = {
+          Wins: 0,
+          Loses: 0,
+          Ties: 0
+        }
+      }
+      */
 
       /*console.log(localStorage.getItem('score'));*/  // to get a value from localStorage.
     
