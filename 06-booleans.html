@@ -52,6 +52,31 @@
 
 
     const result = true ? 'truthy' : 'falsy'
+
+    const product3 = {
+      name: 'Chika',
+      price: 50
+    };
+
+    const product4 = {
+      name: 'Chika',
+      price: 50
+    };
+
+    function isSameProduct(product1, product2){
+          if (product1.name === product2.name && product1.price === product2.price){
+            return true;
+            console.log('true');
+          
+          }
+          else{
+            return false;
+            console.log('false');
+          }     
+    }
+
+    isSameProduct(product3, product4);
+
     </script>
   </body>
 </html>
