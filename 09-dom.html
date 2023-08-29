@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <BUTTon>hello</BUTTon>
+    <button class="js-button"> Second <button></button></button>
+
+    <script>
+        console.log(document.querySelector('button')); 
+        document.querySelector('button')
+            .innerHtml = 'Changed';
+
+        console.log(document.querySelector('.js-button')); 
+        const buttonElement = document.querySelector('.js-button');
+        console.log(buttonElement);
+
+
+
+
+        console.log(documet.title);
+        document.title = 'Changed';
+
+        console.log(document.body);
+
+        console.log(document.body.inner);
+        document.body.innerHTML =  'Changed' // this changes everything on the  document to when is on the right side
+
+        /*
+        document.body.innerHTML = 'hello';
+        document.title = 'Good job';
+        */
+
+        document.body.innerHTML = '<button> Good Job!</button>'
+    </script>
+</body>
+</html>
