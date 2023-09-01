@@ -15,13 +15,14 @@ function renderTodoList(){
         const todoObject = todoList[i];
         const name = todoObject.name;
         const dueDate = todoObject.dueDate;
-        const html = `<p> 
-        ${name} ${dueDate} 
+        const html = 
+        `<div> ${name} </div> 
+         <div> ${dueDate} </div>
         <button onclick="
             todoList.splice(${i},1);
             renderTodoList();
-        ">Delete</button>
-        </p>`;
+        " class = "delete-todo-button">Delete</button>
+        `;
         todoListHTML +=  html;
     }
 
@@ -43,7 +44,8 @@ const dueDate = dateInputElement.value;
 todoList.push({
     name: name,
     dueDate: dueDate
-})
+});
+
 
 
 
@@ -51,3 +53,4 @@ todoList.push({
 
     renderTodoList();
 }   
+
