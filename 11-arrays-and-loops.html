@@ -77,6 +77,60 @@
        }
        console.log(numsDouble);
        
+       const array1 = [1, 2, 3 ];
+       const array2 = array1.slice() // creates a copy of array1 and stores in a new memory location with array2 referencing it.
+
+       const [firstValue, secondValue] = [1, 2, 3];
+       console.log(firstValue);
+
+       function forLoop{
+
+       for (let i = 1; i <= 10; i++) {
+        console.log(i);
+        if (i === 8) {
+            continue; // skips the rest of the iteration and returns to the beginning.
+        }
+        console.log(i);
+        if (i === 8){
+            break; // lets us exit the loop at this point
+        }
+       }
+    }
+
+    function whileLoop(){
+
+       let i = 1;
+
+       while (i <= 10) {
+        if (i % 3 === 0){
+            i++;     // when using continue in a while loop perform the increment step 'i++' before the continue statement.
+            continue;
+        }
+        console.log(i);
+        i++
+       }
+
+    }
+
+    function doubleArray(nums) {
+    const nums = [1,1,3]
+    const numsDouble = [];
+        
+       for (let i = 0; i < nums.length; i++){
+        const num = nums[i];
+
+        if (num === 0) {
+             //break;
+            return numsDouble
+        }
+        numsDouble.push(num * 2);
+       }
+       //console.log(numsDouble);
+       return numsDouble;
+    }
+
+    console.log(doubleArray([1, 1, 3]));
+    console.log(doubleArray([2, 2, 5]));
 
     </script>
 </body>
